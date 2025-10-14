@@ -1,0 +1,368 @@
+/* basic nav settings */
+nav
+{
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  min-height: 15vh;
+  z-index: 100;
+  color: white;
+  transition: 250ms;
+}
+
+.nav-logo
+{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-logo h4
+{
+  font-size: 2.5em;
+
+  font-family: Impact;
+  margin: 0;
+  text-align: left;
+  color: #FCDB00;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+
+  display: none;
+}
+
+.nav-links
+{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.nav-links li
+{
+  list-style-type: none;
+}
+
+nav a
+{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: none; /* oculta texto */
+  margin-top: 20px;
+  /* font-size: 14px; */
+  font-weight: 600;
+}
+
+.nav-burger
+{
+  display: none;
+}
+
+.nav-burger div
+{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+  transition: all 300ms ease;
+  display: none; /* oculta burger */
+}
+
+/* breakpoint for smaller width */
+@media screen and (max-width: 1100px)
+{
+  .nav-links
+  {
+    width: 50%;
+  }
+}
+
+/* breakpoint for burger menu */
+@media screen and (max-width: 1100px) /*768*/
+{
+  nav
+  {
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .nav-links
+  {
+    position: absolute;
+    left: 50%;
+    top: 30vh;
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 500ms ease;
+    transform: translateX(100%);
+    box-shadow: 1px 1px 5px 1px #aaa;
+  }
+  
+  .nav-links a
+  {
+    position: relative;
+    color: black;
+  }
+  
+  .nav-links li
+  {
+    opacity: 0;
+  }
+  
+  .nav-burger
+  {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* when burger is pressed */
+.nav-active
+{
+  transform: translateX(-50%);
+}
+
+/* link text fade in */
+@keyframes navLinkFade
+{
+  from
+  {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  
+  to
+  {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* when burger pressed rotate and make line disappear */
+.toggle .nav-line1
+{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .nav-line2
+{
+  opacity: 0;
+}
+
+.toggle .nav-line3
+{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* when scrolled */
+.nav-scroll-active
+{
+  background-color: white;
+  min-height: 8vh;
+  box-shadow: 0 0 3px #333;
+}
+
+.nav-scroll-active h4
+{
+  display: block; /* muestra texto */
+}
+
+.nav-scroll-active a
+{
+  color: black;
+  display: block; /* muestra texto */
+}
+
+.nav-scroll-active .nav-burger div
+{
+  background-color: black;
+  display: block; /* muestra burger */
+}
+
+/* border under links when hovered */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom center;
+  transition: transform 100ms ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+
+.nav-links-scroll-active a::after
+{
+  background-color: black;
+}
+
+.text
+{
+  position: relative;
+  font-size: 1.5em;
+  margin: 2em 20%;
+  color: white;
+}
+
+header
+{
+  position: relative;
+  height: 0vh; /*vh*/
+  width: 100%;
+  background-color: black;
+  
+  /* background-image: url('http://www.11-76.com/themes/roundex/intro-images/img/background/SINGLE-bg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.heading
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading h1
+{  
+  color: white;
+  font-size: 9em;
+}
+
+.sub-title
+{
+  color: white;
+  font-size: 1.1em;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+}
+
+.heading a p
+{
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.heading a
+{
+  position: relative;
+  top: 40vh;
+  text-decoration: none;
+  padding: 1em 3em;
+}
+
+@media screen and (max-height: 600px)
+{
+  .heading a
+  {
+    top: 10vh;
+  }
+}
+
+/* border left */
+.heading a::before 
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: white;
+}
+
+/* border right */
+.heading a::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background-color: white;
+}
+
+/* basic border styling */
+.heading a div
+{
+  position: absolute;
+  background-color: white;
+  height: 1px;
+  width: 1em;
+  transition: 500ms;
+}
+
+.btn-top{top: 0;}
+.btn-bot{bottom: 0;}
+.btn-left{left: 0;}
+.btn-right{right: 0;}
+
+.heading a:hover > div
+{
+  width: 51%;
+  transition: 500ms;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+h2
+{
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+p, h1, h2, h3, h4, h5, h6, a
+{
+    font-family: 'Arial';
+}
+
+/* titulo responsive */
+
+@media screen and (max-width: 1160px)
+{
+  .nav-logo .Socius
+  {
+    width: 400px;
+  }
+  .nav-logo h4
+  {
+    font-weight: 200;
+    font-size: 27px;
+  }
+  nav a
+  {
+    /* font-size: 12px; */
+  }
+}

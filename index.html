@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>|AXIS|Topografía|</title>
+  
+  <link rel="stylesheet" href="style_Animate_on_Scroll.css">
+  <link rel="stylesheet" href="style_Modal.css">
+  <link rel="stylesheet" href="style_Menu.css">
+  <link rel="stylesheet" href="style_MenuRes.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<!-- Fin Global site tag (gtag.js) - Google Analytics -->
+
+<style>
+/* @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700); */
+
+body { overflow-x: hidden; }
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+#parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
+#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+#parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:1; font-weight:400; letter-spacing:2px; text-transform: uppercase; color: black !important; margin-bottom: 2px;}
+#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:14px; line-height:20px; margin-top:0; color: black !important;}
+.first-character {font-weight:600; font-size: 30px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+.sc {
+  color: gold;   
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
+  font-family: impact;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+.ny {color: #3d3c3a;}
+.atw {color: #c48660;}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {background: white; padding: 60px; margin:0 auto; text-align:center;}
+#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one { padding-top: 0px; padding-bottom: 0px; overflow: hidden; position: relative; width: 100%; background-image: url(); background-color: black; background-attachment: fixed; background-size: 100%; background-repeat: no-repeat; background-position: center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(); background-color: black; background-attachment: fixed; background-size: 50%; background-repeat: no-repeat; background-position: center center;}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+  #parallax-world-of-ugg h2 {font-size:30px;}
+  #parallax-world-of-ugg .block {padding: 30px;}
+  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+@media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+
+/* */
+
+@media screen and (max-width: 767px) {
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one { background-size: 100%; }
+#parallax-world-of-ugg .parallax-two { background-size: 100%; }
+#parallax-world-of-ugg .parallax-three { background-size: 100%; }
+}
+  
+/**/
+
+#whastseven{
+    position:fixed;
+    bottom:30px;
+    right:25px;
+    z-index:10000;
+}
+#whastseven .icon{
+    width:60px;
+    height:60px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index:10000;
+    float:right;
+    transition: transform .2s; /* animação */
+}
+#whastseven .icon:hover{
+    transform: scale(1.1);
+    /*transform: rotateY(360deg);*/
+}
+#whastseven #msg{
+    background-color: #FFF !important;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.342) 0px 2.5px 10px !important;
+    color: #000;
+    font-size: 14px;
+    width: 260px;
+    padding: 10px 10px;
+    right:20px; 
+    margin: 0 50px 0 0;
+    display:block;
+}
+#whastseven #msg button{
+    float: right;
+    border: 0px;
+    background-color: rgba(255,255,255,0.8);
+    top: -6px;
+    position: relative;
+    right: -4px;
+}
+#whastseven #msg button:hover{
+  color:red;
+}
+
+@media (max-width: 700px) 
+{
+   #whastseven p{ display:none;}  
+}
+
+/* */
+  
+.titulo h2 {  
+  font-size: 4em;
+  font-weight: 600;
+  font-family: 'Sans-serif';
+  text-transform: uppercase;
+  padding:0;
+  margin:0;
+  letter-spacing:10px;
+  text-align:center;
+  z-index:10;
+  opacity:.9;
+  background: -webkit-linear-gradient(left top, red, yellow);
+  background: linear-gradient(to bottom right, red, yellow);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitulo h2 {  
+  font-size: 5em;
+  font-weight: 500;
+  font-family: 'Sans-serif';
+  text-transform: uppercase;
+  color:black;
+  padding:0;
+  margin:0;
+  letter-spacing:10px;
+  text-align:center;
+  z-index:10;
+  opacity:.9;
+}
+  
+/* titulo responsive */
+@media screen and (max-width: 1100px)
+{
+  .titulo h2
+  {
+    font-weight: 600;
+    font-size: 2em;
+  }
+  
+  .subtitulo h2
+  {
+    font-weight: 500;
+    font-size: 2em;
+  }
+}
+
+/* */
+  
+.stroke h2 {  
+  margin: 4px;
+  padding: 4px;
+  text-align: left;
+  color: #FCDB00;
+  font-family: impact;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+/* titulo responsive */
+@media screen and (max-width: 600px)
+{
+  .stroke h2
+  {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+/* */
+
+.rosa {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -8px;
+  margin-left: -22px;
+  margin-right: -20px;
+  width: 100px;
+  height: 100px;
+  background: url("https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/RosaVientos_preview_rev_1.png?v=1708660068489") no-repeat center center;
+}
+
+.rosa span {
+  display: none;
+}
+
+@media screen and (max-width: 1100px)
+{
+  .rosa
+  {
+  	margin-top: -4px;
+    margin-left: -5px;
+    margin-right: -8px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* */
+
+/* Rotar */
+
+.rotar2 {
+  /*arredonda a imagem*/
+  border-radius: 100%;
+  /*deixa a imagem quadrada*/
+  height: 200px;
+  width: 200px;
+  /*nao deixa que a imagem fique esticada*/
+  object-fit: cover;
+  /*deixa a imagem centralizada*/
+  background-position: center center;
+}
+
+/* Animate */
+.rotar {
+    width:200px;
+    height:200px;
+    border-radius:160px;
+    border:7px solid #666;
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+
+    overflow:hidden;
+}
+
+.rotar:hover {
+	width:200px;
+    height:200px;
+    border-radius:160px;
+    border:10px solid #666;
+
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+
+/* Fin | Rotar */
+
+/* Ventana Modal */
+
+body {font-family: Arial, Helvetica, Sans-serif;}
+
+/* Fondo modal: negro con opacidad al 50% */
+.modal {
+  display: none; /* Por defecto, estará oculto */
+  position: fixed; /* Posición fija */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 100px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Algura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+}
+
+/* Ventana o caja modal */
+.contenido-modal {
+  position: relative; /* Relativo con respecto al contenedor -modal- */
+  background-color: white;
+  margin: auto; /* Centrada */
+  padding: 20px;
+  width: 80%;
+  -webkit-animation-name: animarsuperior;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s
+}
+
+.modal-content {
+  display: none;
+  vertical-align: middle;
+  text-align: center; 
+  background-image: url(&#39;&#39;); 
+  background-repeat: no-repeat;
+}
+
+/* Animación */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Botón cerrar */
+.close {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Fin | Ventana Modal */
+
+/* Google Maps responsive */
+
+@media screen and (max-width: 1100px)
+{
+  .info_dir_mapa
+  {
+  	font-size: 14px;
+  }
+  .Contactenos
+  {
+    display: none;
+  }
+}
+
+/* Fin | Google Maps responsive */
+
+/* Efecto Maquina de Escribir */
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  background: url(https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/hand-click.jpg?v=1741743081127) no-repeat 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  /*margin: 15px 30px;*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  animation: sonarEffect 1.3s; /*ease-out 10s;*/
+  /*animation-iteration-count: infinite;*/
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Fin | Efecto Maquina de Escribir */
+
+/* Menu */
+
+
+
+/* Fin | Menu */
+
+</style>
+
+</head>
+<body>
+  
+<!-- onload="maquina('typer','El arte  que describe matemáticamente y gráficamente la superficie de un terreno.',100);" -->
+
+<!-- Menu -->
+<div class="wrapper">
+  <input id="menuExtend" type="checkbox"/>
+  <header>
+    <div class="row">
+      <div class="col" id="menubar">
+        <!-- <div class="stroke"><h2>Socius TOP<div class="rosa"><span>O</span></div>GRAFÍA</h2></div> -->
+        <h2>AXIS</h2>
+        <label id="hamburger" for="menuExtend"><span>Menu</span></label>
+      </div>
+      <div class="col" id="navbar">
+        <nav>
+          <a class="on" href="#Portada">Portada</a>
+          <a href="#Portafolio">Portafolio</a> <!-- onclick="document.getElementByClassName('wrapper').style.display='none';" -->
+          <a href="#Proyectos" id="uncheck-id">Proyectos</a>
+          <a href="#Mapa">Contactenos</a>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--
+  <section>
+    <h1>
+       Pure CSS Menu <span># Responsive</span></h1>
+  </section>
+  -->
+</div>
+<!-- Fin | Menu -->
+
+<!-- -->
+<section id="Portada">
+<div id="portada" style="position: absolute; top: 0px; z-index: 1000;">
+  <img style="background-size: cover;
+              max-width: 100%;
+              height: auto;
+              display: block;
+              vertical-align: middle;
+              border: 0;"
+              src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/Portada_2.png?v=1741356055625">
+         <!-- src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/Portada_Final.jpeg?v=1709944635689" -->
+                           
+  <!-- Efecto Maquina de Escribir -->
+
+  <!-- Fin | Efecto Maquina de Escribir -->
+</div>
+</section>
+<!-- -->
+
+<!-- whatsapp -->
+<!--<link rel="stylesheet" href="./font-awesome.min.css">-->
+<div id="whastseven">
+<!-- -->
+<div id="msg"><button onclick="document.getElementById('msg').style.display='none';">x</button> 
+Bienvenido, pregunta por nuestros servicios a través de nuestros canales digitales vía <b style="color:green">WhatsApp</b><!--, utilice nuestro <b style='color:green'>Chat</b> integrado o envíenos un mensaje diligenciando nuestro formulario en la opción <b style='color:green'>Contáctenos</b>-->.
+</div>
+<!-- -->
+<!-- <a class="icon" href="https://api.whatsapp.com/send?phone=+573164522639&text=Me gustaría recibir más información del Festival del Fuego Vivo." target="_blank"> -->
+<a class="icon" href="https://api.whatsapp.com/send?text=Estoy%20interesado%20...&amp;phone=573150555333" target="_blank">
+
+<!-- <i style="margin-top:16px" class="fa fa-whatsapp"></i> -->
+<img style="max-width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: middle;
+            border: 0;" 
+     src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/whatsapp.png?v=1708659318298" alt="whatsapp">
+</a>
+</div>
+<!-- Fin whatsapp -->
+
+<section id="Portafolio" style="margin-top: 65%;">
+<center>
+<span class="first-character sc">NUESTRO PORTAFOLIO DE SERVICIOS</span><br>
+<a class="hi-icon"></a>
+</center>
+</section>
+
+<div id="menu_Portafalio">
+
+<section>
+  <div class="box" data-animation="zoomIn">
+  	<center><img class="rotar" name="1" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(00).png?v=1708659554949" width="120px" alt="no_image"></center>
+  	<h3><b>TOPOGRAFÍA PARA EDIFICACIÓN Y OBRA CIVIL</b></h3>
+    <p>Iniciamos desde el replanteo del plano a la obra – y todo el proceso constructivo posterior, localización ejes de columnas, vigas, tuberías, puntos eléctricos., toma niveles para  fundida.</p>
+  </div>
+  <div class="box" data-animation="zoomIn" data-animation-delay="300ms">
+  	<center><img class="rotar" name="2" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(0).png?v=1708659565377" width="120px" alt="no_image"></center>
+    <h3><b>AGRIMENSURA Y TRAMITES CATASTRALES (ENGLOBE – DESENGLOBE)</b></h3>
+    <p>Levantamientos de predios y trámites catastrales y notariales, para legalización ante entidades oficiales.</p>
+  </div>
+  <div class="box" data-animation="zoomIn" data-animation-delay="600ms">
+  	<center><img class="rotar" name="3" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(1).png?v=1708659577906" width="180px" alt="no_image"></center>
+    <h3><b>FOTOGRAMETRIA, CARTOGRAFIA Y FOTOGRAFIA CON DRONE</b></h3>
+    <p>Se emplean drones de última tecnología que permiten acceder a áreas de difícil acceso y acaparar grandes extensiones de terreno de entre 100 y varios miles de hectáreas, para efectuar mediciones de manera más ágil y rápida.</p>
+  </div>
+</section>
+<section>
+  <div class="box" data-animation="slideInDown">
+  	<center><img class="rotar" name="4" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(3).png?v=1708661170053" width="120px" alt="no_image"></center>
+    <h3><b>EJECUCION Y CALCULO DE MOVIMIENTO DE TIERRAS</b></h3>
+    <p>Replanteamos todo tipo de movimientos de tierras para su ejecución y realizamos los cálculos necesarios para obtener los datos de volúmenes de desmontes y terraplenes.</p>
+  </div>
+  <div class="box" data-animation="slideInDown" data-animation-delay=".3s">
+  	<center><img class="rotar" name="5" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(5).png?v=1708661203507" width="200px" alt="no_image"></center>
+    <h3><b>LEVANTAMIENTO Y REPLANTEOS DE OBRAS LINEALES</b></h3>
+    <p>Levantamos la traza necesaria para la realización del proyecto de obra lineal y realizamos los perfiles longitudinales para el ajuste de las rasantes necesarias para la ejecución de la obra.</p>
+  </div>
+  <div class="box" data-animation="slideInDown" data-animation-delay=".6s">
+    <center><img class="rotar" name="6" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(7).png?v=1708659601331" width="190px" alt="no_image"></center>
+    <h3><b>LEVANTAMIENTOS INDUSTRIALES</b></h3>
+    <p>Contamos con el recurso humano especializado para el desarrollo de levantamiento en plantas industriales y construcciones urbanísticas.</p>
+  </div>
+</section>
+<section>
+  <div class="box" data-animation="fadeIn">
+  	<center><img class="rotar" name="7" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(9).png?v=1708659636599" width="120px" alt="no_image"></center>
+    <h3><b>GESTION DE INVENTARIO DE OBRA</b></h3>
+    <p>Se realiza inventario de obra con base a planos estructurales, hidráulicos, eléctricos,  etc.. Para cuantificar el total de materiales de obra.</p>
+  </div>
+  <div class="box" data-animation="fadeIn" data-animation-delay="300ms">
+  	<center><img class="rotar" name="8" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(11).png?v=1708659682834" width="120px" alt="no_image"></center>
+    <h3><b>ELABORACIÓN DE PLANOS RECORD DE OBRA</b></h3>
+    <p>Levantamiento y  registro  en el cual se consigna la información de la red instalada en el terreno y se describen los detalles de su construcción y localización geográfica.</p>
+  </div>
+  <div class="box" data-animation="fadeIn" data-animation-delay="600ms">
+  	<center><img class="rotar" name="9" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(13).png?v=1708659667636" width="180px" alt="no_image"></center>
+    <h3><b>DIGITALIZACIÓN DE PLANOS</b></h3>
+    <p>La digitalización de planos es la forma más sencilla, eficiente y rentable para almacenar, administrar y consultar grandes volúmenes de planos, en formato de imágenes digitales.</p>
+  </div>
+</section>
+
+</div>
+  
+<!-- Ventana Modal -->
+<div id="ventanaModal" class="modal">
+  <div id="contenido_modal" class="contenido-modal">
+
+<!-- Portfolio Modal 1 -->
+    <div class="modal-content" id="portfolioModal_1">
+        <div class="close-modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <h2>TOPOGRAFÍA PARA EDIFICACIÓN Y OBRA CIVIL</h2>
+        <p>Iniciamos desde el replanteo del plano a la obra – y todo el proceso constructivo posterior, localización ejes de columnas, vigas, tuberías, puntos eléctricos., toma niveles para  fundida.</p>
+        <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/Imagen1.png?v=1708659258170" alt=""></center>
+        <p>Gracias a la topografía arquitectos, ingenieros y los diferentes profesionales implicados en el proyecto pueden conocer las necesidades técnicas requeridas. Así, los topógrafos se involucran en las diferentes fases, verifican la construcción y modificación de las estructuras y, una vez que finalizan los trabajos, tienen la última palabra para asegurar que la construcción corresponde exactamente con los planos originales.<br><br>
+        ⚜ Preliminares: son los que nutrirán al arquitecto de la información necesaria en lo referente a la topografía general del terreno, a las calles, aceras y pavimentos, así como servicios públicos de agua potable, gas o electricidad.<br><br>
+        ⚜ De construcción: replanteos de ejes de obras, niveles de referencia, etc.<br><br>
+        ⚜ De posición: son los que se realizan una vez que se termina la construcción del edificio y que delimitarán si los trabajos se han llevado a cabo correctamente.</p>
+        <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 1 -->
+
+<!-- Fin | Portfolio Modal 2 -->
+    <div class="modal-content" id="portfolioModal_2">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>AGRIMENSURA Y TRAMITES CATASTRALES (ENGLOBE – DESENGLOBE)</h2>
+      <p>Levantamientos de predios y trámites catastrales y notariales, para legalización ante entidades oficiales.</p>
+      <center><img src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/images%20(4).jpg?v=1708660402970" alt=""><img src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/images%20(5).jpg?v=1708660433650" alt=""></center>
+      <p>Es un acto por medio del cual el propietario de un terreno procede a dividirlo en varias porciones, se requiere que se presenten licencia de división expedida por autoridad competente, la cual se hace con fundamento en los planos presentados ante la misma y la descripción de cada una de los lotes con sus áreas linderos y ubicados al igual que se debe presentar el título antecedente, es decir la escritura por medio de la cual se adquirió.</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 2 -->
+
+<!-- Fin | Portfolio Modal 3 -->
+    <div class="modal-content" id="portfolioModal_3">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>FOTOGRAMETRIA, CARTOGRAFIA Y FOTOGRAFIA CON DRONE</h2>
+      <p>Se emplean drones de última tecnología que permiten acceder a áreas de difícil acceso y acaparar grandes extensiones de terreno de entre 100 y varios miles de hectáreas, para efectuar mediciones de manera más ágil y rápida.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(2).png?v=1708661157355" alt=""></center>
+      <p>Hablando en general, la fotogrametría es la técnica (o colección de técnicas) que permiten hacer reconstrucciones de terrenos y medidas a partir de imágenes aéreas. Es un proceso muy complejo en el que el objetivo principal es convertir datos bidimensionales (imágenes planas) en información cartográfica/tridimensional. Algunas de estas técnicas existen desde el siglo XIX aunque en últimos doscientos años han recibido tremendos avances gracias, entre otros, al uso de aviones, drones, desarrollo de cámaras digitales y los satélites artificiales.</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 3 -->
+
+<!-- Fin | Portfolio Modal 4 -->
+    <div class="modal-content" id="portfolioModal_4">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>EJECUCION Y CALCULO DE MOVIMIENTO DE TIERRAS</h2>
+      <p>Replanteamos todo tipo de movimientos de tierras para su ejecución y realizamos los cálculos necesarios para obtener los datos de volúmenes de desmontes y terraplenes.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(4).png?v=1708659589348" alt=""></center>
+      <p>Consiste en determinar los volúmenes de cada tramo en corte y cada tramo en relleno para, multiplicando el área de la sección transversal media de dichos tramos por sus longitudes, obtener los volúmenes correspondientes que habría que sumar.</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 4 -->
+
+<!-- Fin | Portfolio Modal 5 -->
+    <div class="modal-content" id="portfolioModal_5">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>LEVANTAMIENTO Y REPLANTEOS DE OBRAS LINEALES</h2>
+      <p>Levantamos la traza necesaria para la realización del proyecto de obra lineal y realizamos los perfiles longitudinales para el ajuste de las rasantes necesarias para la ejecución de la obra.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(6).png?v=1708661213411" alt=""></center>
+      <p>Definiéndose una obra lineal como aquella en la que la característica principal es una línea. Se puede utilizar en caminos, carreteras, autovías y líneas férreas, canales, etc.<br><br>Después de crear una obra lineal, se pueden extraer datos de ella, incluidos los datos de superficies, líneas características (como polilíneas, alineaciones, perfiles y líneas características de explanación) y volumen (cubicación).</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 5 -->
+
+<!-- Fin | Portfolio Modal 6 -->
+    <div class="modal-content" id="portfolioModal_6">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>LEVANTAMIENTOS INDUSTRIALES</h2>
+      <p>Contamos con el recurso humano especializado para el desarrollo de levantamiento en plantas industriales y construcciones urbanísticas.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(8).png?v=1708659625811" alt=""></center>
+      <p>Contamos con recurso humano especializado para el desarrollo de levantamientos en plantas industriales y construcciones urbanísticas, simulando y modelando entornos complejos en 3D, llevando a información digital cualquier tipo de estructura o maquinaria de manera tridimensional y bidimensional, siguiendo con los más altos estándares de dibujo técnico y precisión.</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 6 -->
+
+<!-- Fin | Portfolio Modal 7 -->
+    <div class="modal-content" id="portfolioModal_7">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>GESTION DE INVENTARIO DE OBRA</h2>
+      <p>Se realiza inventario de obra con base a planos estructurales, hidráulicos, eléctricos,  etc.. Para cuantificar el total de materiales de obra.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(10).png?v=1708659646636" alt=""></center>
+      <p>INVENTARIO DE PLANOS DEL PROYECTO DE EDIFICACION: Unas de las primeras tareas para comenzar a realizar un presupuesto de obra es reconocer la información con la que contamos. Si es adecuada o no la coordinación entre los planos del proyecto y que nos hace falta. En esta actividad usted deberá diseñar un formato en Word o Excel, en donde, a manera de inventario relacione lo planos que se suministran en el proyecto de edificación del curso (incluyendo escalas, fechas, diseñador, nombre del planos entre otro datos que considere convenientes).</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 7 -->
+
+<!-- Fin | Portfolio Modal 8 -->
+    <div class="modal-content" id="portfolioModal_8">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>ELABORACIÓN DE PLANOS RECORD DE OBRA</h2>
+      <p>Levantamiento y  registro en el cual se consigna la información de la red instalada en el terreno y se describen los detalles de su construcción y localización geográfica.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(12).png?v=1708659660931" alt=""></center>
+      <p>En los planos se debe organizar la información a imagen y semejanza de lo existente, aquellos elementos físicos de las redes de Acueducto y Alcantarillado, Estructuras, l etc. que cumplen una función específica dentro de la operación y posen información gráfica que representa los accesorios y/o estructuras (tramos de redes, cámaras, sumideros, Tuberías, Muros, Losas ,  Hidrantes, etc.) y  grafica que nombra y caracteriza físicamente los elementos de forma cualitativa y cuantitativamente en forma única (Atributos de cada accesorio y/o estructura).&nbsp;</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 8 -->
+
+<!-- Fin | Portfolio Modal 9 -->
+    <div class="modal-content" id="portfolioModal_9">
+      <div class="close-modal">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+      </div>
+      <h2>DIGITALIZACIÓN DE PLANOS</h2>
+      <p>La digitalización de planos es la forma más sencilla, eficiente y rentable para almacenar, administrar y consultar grandes volúmenes de planos, en formato de imágenes digitales.</p>
+      <center><img class="img-responsive img-centered" src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/uc(14).png?v=1708659673481" alt=""></center>
+      <p>La digitalización de planos es la forma más sencilla, eficiente y rentable para almacenar, administrar y consultar grandes volúmenes de planos, en formato de imágenes digitales. Ventajas de digitalizar planos: Reducción de las áreas de archivo físico. Reducción de riesgos por pérdida de planos y deterioros. Integración con los sistemas informáticos. Alta velocidad y calidad de recuperación. Facilidad de duplicación y distribución de documentos. Evita el desgaste o maltrato de los documentos originales.</p>
+      <br><br><br>
+    </div>
+<!-- Fin | Portfolio Modal 9 -->
+
+    </div>
+</div>
+<!-- Fin | Ventana Modal -->
+
+<!-- parallax -->
+<div id="parallax-world-of-ugg" style="background-color: white;">
+
+<section id="Proyectos">
+  <div class="block">
+    <p class="line-break" style="margin-bottom: 9px;"></p>
+    <p style="font-family: 'Oswald', sans-serif; font-size: 1.3em; font-weight: 300;">
+      <center><span class="first-character sc">PROYECTOS Y SERVICIOS PRESTADOS</span><br></center>
+      Proporcionamos servicios a todo Colombia, certificamos nuestra trayectoria y experiencia con obras hechas realidad.</p>
+    <p class="line-break margin-top-10"></p>
+    <!--<p class="margin-top-10">-->
+  </div>
+</section>
+  
+<section>
+<center>
+  <img src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/Proyecto_1.jpeg?v=1708659291818" style="width: 82%">
+  <h3 style="padding: 20px;">CONTROL DE ASENTAMIENTOS Y TOPOGRAFIA PARA EXCAVACIÓN Y CONTRUCCIÓN DE PANTALLAS COLEGIO JUAN XXIII.</h3>
+</center>
+</section>
+  
+<section>
+<center>
+  <img src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/Proyecto_2.jpeg?v=1708659296190" style="width: 60%">
+  <h3 style="padding: 20px;">CALCULO DE VOLUMEN DE CORTE Y LLENO DE EXCAVACION REPLANTEOS Y MEDICIONES PTAR -  PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES DE MANIZALES.</h3>
+</center>
+</section>
+  
+<section>
+<center>
+  <video loop muted autoplay style="width: 70%"> <!-- poster="dist/img/office.jpg"-->
+  <source src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/VID-20240215-WA0008.mp4?v=1708659332400" type="video/mp4">
+  </video>
+  <h3 style="padding: 20px;">Fotogrametria Y Proyección (3D) Modelos de Elevación Digital de Predios Agricolad Y Cafeteros. Palestina - Dpto Caldas.</h3>
+</center>
+</section>
+
+<!--
+<section>
+  <div class="block">
+    <p class="line-break" style="margin-bottom: 9px;"></p>
+    <p style="font-family: 'Oswald', sans-serif; font-size: 1.3em; font-weight: 300;"><span class="first-character sc">L</span>as Juventudes Gnósticas HONRAMOS al anciano arrugado, barbado, desdentado y encorvado que lleva el brasero sobre su cabeza y espalda, Dios del centro, el fuego del fuego, la llama de la llama, cuando el sol actual aún no existía, eras el primer astro en alumbrar al mundo un “medio” sol hecho de fuego, el Sol de la “Media” noche, poder regenerador del mundo, el más adorado, el de rostro incandescente, sacerdote amarillo, señor del pino.</p>
+    <p class="line-break margin-top-10"></p>
+    !--<p class="margin-top-10">--
+  </div>
+</section>
+
+<section>
+  <div class="parallax-three">
+    <h2>SALTA EL FUEGO SAGRADO</h2>
+  </div>
+</section>
+-->
+</div>
+<!-- Fin parallax -->
+
+<center><span class="first-character sc">CONTACTENOS</span></center>
+  
+<!-- Google Maps -->
+<section style="z-index: -100; height: 400px;" id="Mapa">
+  <div style="position: absolute; width: 100%; height: 400px; z-index: 99;" class="iframe_mapa">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3974.2241055852746!2d-75.5210793255707!3d5.067390588370772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8e476ffa6980af73%3A0x18c5dd05e18a41f9!2sPlaza%20De%20Bol%C3%ADvar%2C%20Manizales%2C%20Caldas!3m2!1d5.0681761!2d-75.5173883!4m5!1s0x8e476fdd5947f759%3A0xa907ddf07711024e!2sEdificio%20Caja%20Agraria%2C%20Cra.%2023%20%23Calle%2020%20esquina%2C%20Manizales%2C%20Caldas!3m2!1d5.067086!2d-75.5188843!5e0!3m2!1ses!2sco!4v1707791749556!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!--<iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>-->
+  </div>
+
+  <div style="display: block;
+              position: relative;
+              left: 75%;
+              width: 20vw;
+              z-index: 1001;
+              -webkit-transform:translateX(-50%);
+              background:rgba(222,222,222,.6);
+              margin-top: 20px;
+              padding: 10px;
+              border-radius: 12px;
+              box-shadow: .5px 4px 20px rgba(0,0,0,.5);" class="div_mapa">
+      <!-- <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">COMO LLEGAR? </h2> -->
+      <center>
+      	<img src="https://cdn.glitch.global/3b57386e-7c11-4b9b-9b9d-b913e2bd3a01/EdificioCajaAgraria.PNG?v=1708659202582" style="width: 100%; height: 100%; border-radius: 12px;" class="img_mapa">
+      </center>
+      <!--<button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>-->
+      <!-- <p class="text-xs text-gray-500 mt-3">[ ! ]</p> -->
+  </div>
+  <div style="display: block;
+              position: relative;
+              right: 25%;
+              width: 40vw;
+              z-index: 1001;
+              -webkit-transform:translateX(-50%);
+              background:rgba(222,222,222,.6);
+              margin-top: 100px;
+              padding: 10px;
+              border-radius: 12px;
+              box-shadow: .5px 4px 20px rgba(0,0,0,.5);" class="div_dir_mapa">
+      <div style="background-color: white; padding: 10px; border-radius: 9px;" class="info_dir_mapa">
+          Dirección: Carrera 23 Calle 20
+      <br>Edificio Caja Agraria - Oficina 413
+      <br>serviciostopograficos.eje@gmail.com
+      <br>Cel.: 312 756 38 05
+      <br>A 7 min de la Estación del Cable Aereo de Fundadores y a 5 min desde la Plaza de Bolivar
+      </div>
+  </div>
+</section>
+<!-- Fin Google Maps -->
+
+<!-- Pie de pagina -->
+<footer style="background-color: #cccccc;">
+<div style="background-color: #cccccc; font-family: sans-serif; font-weight: 400; font-size: 20px; color: black !important; text-align: center;">
+2024 Municipio de Manizales Caldas — Colombia
+</div>
+</footer>
+<!-- Fin Pie de pagina -->
+
+<script  src="./script_Animate_on_Scroll.js"></script>
+
+</body>
+</html>
+
+<script language="javascript">
+
+/* Ventana Modal */
+
+const contenido_ventana_modal = [];
+
+contenido_ventana_modal[0] = ''
+
+// Ventana modal
+var modal = document.getElementById("ventanaModal");
+
+// contenido-modal
+var contenido_modal = document.getElementById("contenido_modal");
+
+// Botón que abre el modal
+//alert(document.getElementsByClassName("rotar").length);
+var boton = document.getElementsByClassName("rotar");
+
+for(let i = 0; i < boton.length; i++) {
+	// Cuando el usuario hace click en el botón, se abre la ventana
+	boton[i].addEventListener("click",function() {
+    //alert(boton.getAttribute("name"));
+    //contenido_modal.innerHTML = contenido_ventana_modal[boton.getAttribute("name")]
+    portfolioModal = document.getElementById("portfolioModal_" + boton[i].getAttribute("name"));
+    portfolioModal.style.display = "block";
+    modal.style.display = "block";
+  });
+}
+
+var portfolioModal;
+
+/* Cuando el usuario hace click en el botón, se abre la ventana
+boton.addEventListener("click",function() {
+  alert(boton.getAttribute("name"));
+  //contenido_modal.innerHTML = contenido_ventana_modal[boton.getAttribute("name")]
+  portfolioModal = document.getElementById("portfolioModal_" + boton.getAttribute("name"));
+  portfolioModal.style.display = "block";
+  modal.style.display = "block";
+});
+*/
+
+// Hace referencia al elemento <span> que tiene la X que cierra la ventana
+var span = document.getElementsByClassName("close-modal"); //[0];
+
+for(let i = 0; i < span.length; i++) {
+	// Si el usuario hace click en la x, la ventana se cierra
+	span[i].addEventListener("click",function() {
+	  portfolioModal.style.display = "none";
+	  modal.style.display = "none";
+	});
+}
+
+// Si el usuario hace click fuera de la ventana, se cierra.
+window.addEventListener("click",function(event) {
+  if (event.target == modal) {
+  	portfolioModal.style.display = "none";
+    modal.style.display = "none";
+  }
+});
+
+/* Fin | Ventana Modal */
+
+/* Ocultar Menu al hacer click en Opción */
+
+//alert(document.querySelectorAll("#navbar a").length);
+//var menu = document.querySelectorAll("#navbar a");
+  
+let menu = [document.querySelectorAll("#navbar a")]; /* , document.querySelectorAll("#menu_Portafalio img") */
+
+menu.forEach(function (elemento, indice, array) {
+  /*console.log(array[0]);*/
+  for(let i = 0; i < elemento.length; i++) {
+    /*console.log(elemento[i]);*/
+	  elemento[i].addEventListener("click",function() {
+      //alert(menu[i].getAttribute("href"));
+      let idCheckbox = document.getElementById("menuExtend");
+      idCheckbox.checked = !idCheckbox.checked;
+    });
+  }
+});
+
+/*
+for(let i = 0; i < menu.length; i++) {
+	  menu[i].addEventListener("click",function() {
+    //alert(menu[i].getAttribute("href"));
+    let idCheckbox = document.getElementById("menuExtend");
+    idCheckbox.checked = !idCheckbox.checked;
+  });
+}
+*/
+/* Fin | Ocultar Menu al hacer click en Opción */
+  
+/* click aqui */
+
+
+  
+/* Fin | click aqui */
+  
+</script>
